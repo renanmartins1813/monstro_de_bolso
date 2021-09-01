@@ -14,6 +14,109 @@ html, body{
 
 body{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(6, auto);
+}
+
+main{
+    grid-row: 2/5;
+    grid-column: 1/7;
+}
+
+.pokedex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.steel {
+	background-color: #f4f4f4;
+}
+
+.fire {
+	background-color: #FDDFDF;
+}
+
+.grass {
+	background-color: #DEFDE0;
+}
+
+.electric {
+	background-color: #FCF7DE;
+}
+
+.water, .ice {
+	background-color: #DEF3FD;
+}
+
+.ground {
+	background-color: #f4e7da;
+}
+
+.rock {
+	background-color: #d5d5d4;
+}
+
+.fairy {
+	background-color: #fceaff;
+}
+
+.poison {
+	background-color: #98d7a5;
+}
+
+.bug {
+	background-color: #f8d5a3;
+}
+
+.dragon {
+	background-color: #97b3e6;
+}
+
+.psychic {
+	background-color: #eaeda1;
+}
+
+.flying {
+	background-color: #F5F5F5;
+}
+
+.fighting {
+	background-color: #E6E0D4;
+}
+
+.normal {
+	background-color: #F5F5F5;
+}
+
+.card:hover {
+	animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+	20% {
+			transform: translateY(-6px);
+	}
+	40% {
+			transform: translateY(0px);
+	}
+
+	80% {
+			transform: translateY(-2px);
+	}
+	100% {
+			transform: translateY(0);
+	}
 }
