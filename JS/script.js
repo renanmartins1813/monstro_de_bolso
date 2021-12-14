@@ -31,8 +31,9 @@ const monstros = () => {
             ul.innerHTML = lisPokemons
         }).then( ()=>{
             const loader = document.querySelector('.loaderContainer');
+            const h1 = document.querySelector('.hidden');
+            h1.className = '';
             loader.className += ' hidden';
-            console.log(loader)
         }
         )
 }
